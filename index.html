@@ -8,17 +8,21 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Wildan</h1>
-            <nav>
-                <ul>
-                    <li><a href="#beranda">Beranda</a></li>
-                    <li><a href="#tentang">Tentang Saya</a></li>
-                    <li><a href="#portofolio">Portofolio</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <h1>Nama Anda</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#tentang" onclick="toggleMenu()">Tentang</a></li>
+                <li><a href="#portofolio" onclick="toggleMenu()">Portofolio</a></li>
+                <li><a href="#kontak" onclick="toggleMenu()">Kontak</a></li>
+            </ul>
+        </nav>
+    </div>
     </header>
 
     <section id="beranda">
@@ -78,5 +82,12 @@
             <p>&copy; 2024 Nama Anda. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("active");
+    }
+</script>
+
 </body>
 </html>
